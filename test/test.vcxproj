@@ -144,10 +144,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DBManager.cpp" />
     <ClCompile Include="sql_api.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DBManager.h" />
     <ClInclude Include="sql_api.h" />
   </ItemGroup>
   <ItemGroup>

@@ -21,9 +21,15 @@
     <ClCompile Include="sql_api.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="DBManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sql_api.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
