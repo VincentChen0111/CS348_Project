@@ -10,17 +10,20 @@ int pnf(int n) {
 		cout << "1. Sign up\n"
 			<< "2. Log in\n"
 			<< "3. Log in as admin\n"
-			<< "con"
+			<< "4. Continue as temporary user\n"
 			<< "0. Quit" << endl;
+		break;
 
 	case 1:
 		cout << "\nYou are in database as admin" << ".\nPlease choose an operation:" << endl;
 		cout << "1. Display items\n"
-			<< "2. Update items \n"
-			<< "3. Delete items\n"
-			<< "4. Modify categories\n"
-			<< "5. Modify on sale items\n"
+			<< "2. add items \n"
+			<< "3. Update items \n"
+			<< "4. Delete items\n"
+			<< "5. Modify categories\n"
+			<< "6. Modify on sale items\n"
 			<< "0. Quit" << endl;
+		break;
 
 	case 2:
 		cout << "\nYou are in database" << ".\nPlease choose an operation:" << endl;
@@ -30,14 +33,14 @@ int pnf(int n) {
 			<< "4. Go to cart\n"
 			<< "5. Check out\n"
 			<< "0. Quit" << endl;
-
+		break;
 
 	case 3:
 		cout << "\nYou are in the search menu" << ".\nPlease choose an operation:" << endl;
 		cout << "1. Search by name\n"
 			<< "2. Search by category\n"
-			<< "3. return to main menu\n"
-			<< "0. Quit" << endl;
+			<< "3. return to main menu\n" << endl;
+		break;
 	default:
 		return -1;
 	}
@@ -77,15 +80,18 @@ UsrCtrl::UsrCtrl(MySQLInterface* UsrCt) : DBManager::DBManager(UsrCt) {};
 bool UsrCtrl::validate(int id, string pw) {
 	errSelect("Select password from RegisteredUsers where uid=" + to_string(id) + ";");
 	if (data.empty()) return false;
-	if (data.at(0).at(1) == pw) return true;
+	if (data.at(0).at(0) == pw) return true;
 	return false;
 }
 
 bool UsrCtrl::reg(int id, std::string name, std::string pw) {
-	errSelect("Select * from RegisteredUsers where uid=" + to_string(id) + ";");
-	if (data.empty()) return false;
+	errSelect("Select * from Users where uid=" + to_string(id) + ";");
+	if (!data.empty()) return false;
+	errQuery(R"(INSERT INTO Users
+VALUES 
+   ()" + to_string(id) + ")");
 	errQuery(R"(INSERT INTO RegisteredUsers
 VALUES 
-   ()" + to_string(id) + "," + name + pw + ",0)" );
+   ()" + to_string(id) + ",'" + name + "','" + pw + "',0)" );
 	return true;
 }
