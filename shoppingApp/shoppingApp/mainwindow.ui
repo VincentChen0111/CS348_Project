@@ -1,0 +1,722 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1027</width>
+    <height>701</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Shopping Application</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_7">
+    <item>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="0" column="2">
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="pageTitle">
+        <property name="font">
+         <font>
+          <pointsize>25</pointsize>
+         </font>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="text">
+         <string>Login</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="font">
+       <font>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+      <property name="currentIndex">
+       <number>2</number>
+      </property>
+      <widget class="QWidget" name="login">
+       <property name="font">
+        <font>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0">
+         <widget class="QTabWidget" name="tabWidget">
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="userLogin">
+           <attribute name="title">
+            <string>User Login</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <item>
+             <widget class="QLabel" name="label_6">
+              <property name="text">
+               <string>Enter name:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="userName"/>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_7">
+              <property name="text">
+               <string>Enter password:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="userPw">
+              <property name="echoMode">
+               <enum>QLineEdit::Password</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_3">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Fixed</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>120</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="userLogin_2">
+              <property name="text">
+               <string>login</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="userFail">
+              <property name="text">
+               <string>login fail</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="adminLogin">
+           <attribute name="title">
+            <string>Admin Login</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_2">
+            <item>
+             <widget class="QLabel" name="label_3">
+              <property name="text">
+               <string>Enter name:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="adminName"/>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_4">
+              <property name="text">
+               <string>Enter password:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="adminPw_2">
+              <property name="echoMode">
+               <enum>QLineEdit::Password</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_2">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Fixed</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>120</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="adminLogin_2">
+              <property name="text">
+               <string>login</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="adminFail">
+              <property name="text">
+               <string>login fail</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="regi">
+           <attribute name="title">
+            <string>Register</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout">
+            <item>
+             <widget class="QLabel" name="label">
+              <property name="text">
+               <string>Enter username:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="regiName"/>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_2">
+              <property name="text">
+               <string>Enter password:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="regiPw"/>
+            </item>
+            <item>
+             <spacer name="verticalSpacer">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Fixed</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>120</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="regiConf">
+              <property name="text">
+               <string>register</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="regiFail">
+              <property name="text">
+               <string>register fail</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="guestLogin">
+           <attribute name="title">
+            <string>Guest</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_6">
+            <item row="0" column="0">
+             <spacer name="horizontalSpacer_3">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="0" column="1">
+             <widget class="QPushButton" name="guestLogin_2">
+              <property name="text">
+               <string>Continue as Guest</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="2">
+             <spacer name="horizontalSpacer_4">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="AdminMenu">
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="0">
+         <widget class="QTabWidget" name="adminTab">
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+           </font>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="updateTab">
+           <attribute name="title">
+            <string>Update</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_9">
+            <item row="0" column="0">
+             <widget class="QTableView" name="updateView"/>
+            </item>
+            <item row="1" column="0">
+             <widget class="QWidget" name="widget_2" native="true">
+              <layout class="QGridLayout" name="gridLayout_10">
+               <item row="1" column="4">
+                <widget class="QPushButton" name="updateCommit">
+                 <property name="text">
+                  <string>CommitAll</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QComboBox" name="updateViewSelect">
+                 <item>
+                  <property name="text">
+                   <string>Categories</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>SubCategories</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Items</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>ItemsOnSale</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+               <item row="0" column="2">
+                <widget class="QPushButton" name="updateAdd">
+                 <property name="text">
+                  <string>Add</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="3">
+                <widget class="QPushButton" name="updateDelete">
+                 <property name="text">
+                  <string>Delete Selected</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QPushButton" name="updateCancel">
+                 <property name="text">
+                  <string>Cancel</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="4">
+                <widget class="QPushButton" name="updateToDiscount">
+                 <property name="text">
+                  <string>Add Items to Discount</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="2" colspan="2">
+                <widget class="QPushButton" name="updateRmExpired">
+                 <property name="text">
+                  <string>Remove all expired sales items</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="catModifyTab">
+           <attribute name="title">
+            <string>Category Modify</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_8">
+            <item>
+             <widget class="QWidget" name="widget_3" native="true">
+              <layout class="QHBoxLayout" name="horizontalLayout_2">
+               <item>
+                <widget class="QTableView" name="catItemView"/>
+               </item>
+               <item>
+                <widget class="QTableView" name="catSubView"/>
+               </item>
+               <item>
+                <widget class="QTableView" name="catCatView"/>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="refresh">
+              <property name="text">
+               <string>Refresh</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QWidget" name="widget_4" native="true">
+              <layout class="QHBoxLayout" name="horizontalLayout_3">
+               <item>
+                <widget class="QPushButton" name="catItemToSub">
+                 <property name="text">
+                  <string>Set Items to Subcategory</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="catSubToCat">
+                 <property name="text">
+                  <string>Set Subcategory to Category</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="UsrMenu">
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <widget class="QWidget" name="widget" native="true">
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <widget class="QTabWidget" name="userTab">
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="currentIndex">
+              <number>1</number>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>16</width>
+               <height>16</height>
+              </size>
+             </property>
+             <widget class="QWidget" name="userView">
+              <attribute name="title">
+               <string>view and add</string>
+              </attribute>
+              <layout class="QGridLayout" name="gridLayout_7">
+               <item row="0" column="0" rowspan="2">
+                <layout class="QGridLayout" name="gridLayout_2">
+                 <item row="2" column="0">
+                  <widget class="QLabel" name="label_5">
+                   <property name="text">
+                    <string>Category:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="6" column="0">
+                  <layout class="QVBoxLayout" name="verticalLayout_4">
+                   <item>
+                    <widget class="QLabel" name="label_9">
+                     <property name="text">
+                      <string>Enter the value:</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QSpinBox" name="itemVal"/>
+                   </item>
+                  </layout>
+                 </item>
+                 <item row="3" column="1">
+                  <widget class="QComboBox" name="userSubcat"/>
+                 </item>
+                 <item row="4" column="0" colspan="2">
+                  <widget class="QPushButton" name="userCatView">
+                   <property name="text">
+                    <string>view</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="3" column="0">
+                  <widget class="QLabel" name="label_8">
+                   <property name="text">
+                    <string>SubCategory:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="6" column="1">
+                  <widget class="QPushButton" name="addCart">
+                   <property name="text">
+                    <string>add selected item to cart</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="1">
+                  <widget class="QComboBox" name="userCat"/>
+                 </item>
+                 <item row="5" column="0" colspan="2">
+                  <widget class="QPushButton" name="userViewSale">
+                   <property name="text">
+                    <string>view items on sale</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="userSearch">
+              <attribute name="title">
+               <string>search</string>
+              </attribute>
+              <layout class="QVBoxLayout" name="verticalLayout_6">
+               <item>
+                <spacer name="verticalSpacer_6">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeType">
+                  <enum>QSizePolicy::Fixed</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>120</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_10">
+                 <property name="text">
+                  <string>Enter key work for search:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="searchLnEdit"/>
+               </item>
+               <item>
+                <spacer name="verticalSpacer_5">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeType">
+                  <enum>QSizePolicy::Fixed</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>70</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QPushButton" name="searchButton">
+                 <property name="text">
+                  <string>search</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="verticalSpacer_4">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeType">
+                  <enum>QSizePolicy::Fixed</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>150</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_11">
+                 <property name="text">
+                  <string>To add item, please go back to view and add tab.</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="verticalSpacer_7">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="userCart">
+              <attribute name="title">
+               <string>cart</string>
+              </attribute>
+              <layout class="QGridLayout" name="gridLayout_8">
+               <item row="0" column="0" colspan="2">
+                <widget class="QPushButton" name="displayCart">
+                 <property name="text">
+                  <string>Display your cart</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="label_12">
+                 <property name="text">
+                  <string>Id:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QLineEdit" name="cartIdLnEdit"/>
+               </item>
+               <item row="2" column="0">
+                <widget class="QLabel" name="label_13">
+                 <property name="text">
+                  <string>Quantity:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1">
+                <widget class="QLineEdit" name="cartQuantityLnEdit"/>
+               </item>
+               <item row="3" column="1">
+                <widget class="QPushButton" name="cartUpdateButton">
+                 <property name="text">
+                  <string>Update</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="1">
+                <widget class="QPushButton" name="checkOutButton">
+                 <property name="text">
+                  <string>Check out</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+           <item>
+            <widget class="QTableView" name="userTableView"/>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1027</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
